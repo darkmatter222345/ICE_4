@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pizzashop;
+//package pizzashop;
 
 /**
  * A class that creates different kinds of pizzas
@@ -20,17 +20,29 @@ class PizzaFactory
      * @param type the type of pizza to return
      * @return 
      */
-    public Pizza createPizza(String type)
+    public static Pizza createPizza(String type)
     {
-        Pizza pizza = null;
-        if(type.equals("cheese"))
+        AbstractFactory hm = null;
+        if(type.equalsIgnoreCase("cheese"))
         {
-            pizza = new CheesePizza();
+            hm = new CheesePizzaFactory();
         }
-        else if (type.equals("pepperoni"))
-        {
-                pizza = new PepperoniPizza();
+        else {
+                hm = new PepperoniPizzaFactory();
         }
-        return pizza;
+        return hm.getpizza(type);
+        
+        /*
+Pizza pizza = null;
+if(type.equals("cheese"))
+{
+pizza = new CheesePizza();
+}
+else if (type.equals("pepperoni"))
+{
+pizza = new PepperoniPizza();
+}
+return pizza;
+*/
     }
 }

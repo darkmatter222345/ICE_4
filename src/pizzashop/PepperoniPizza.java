@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pizzashop;
+//package pizzashop;
 
 /**
  * A class to model pizzas that have cheese and 

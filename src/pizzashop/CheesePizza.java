@@ -1,5 +1,5 @@
 
-package pizzashop;
+//package pizzashop;
 
 /**
  * A class to model pizzas that only have cheese on them
